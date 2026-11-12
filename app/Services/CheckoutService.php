@@ -9,6 +9,7 @@ use App\Models\SaleItem;
 use App\Models\StockMovement;
 use DomainException;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class CheckoutService
 {
@@ -77,7 +78,7 @@ class CheckoutService
                 throw new DomainException('Amount paid is less than the total due.');
             }
 
-            $referenceNo = 'TXN-' . now()->format('YmdHis') . '-' . random_int(100, 999);
+            $referenceNo = 'TXN-'.now()->format('YmdHis').'-'.strtoupper(Str::random(5));
 
             $sale = Sale::create([
                 'user_id' => $userId,

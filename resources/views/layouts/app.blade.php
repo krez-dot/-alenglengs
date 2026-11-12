@@ -1,11 +1,13 @@
 @php
     use App\Support\Ui;
     $navItems = [
+        ['label' => 'Overview', 'icon' => 'grid', 'route' => 'dashboard', 'match' => 'dashboard', 'role' => 'admin'],
         ['label' => 'Checkout', 'icon' => 'bag', 'route' => 'pos.index', 'match' => 'checkout*', 'badge' => 'POS'],
         ['label' => 'History', 'icon' => 'file', 'route' => 'sales.index', 'match' => 'sales*'],
         ['label' => 'Products', 'icon' => 'hexagon', 'route' => 'products.index', 'match' => 'products*', 'role' => 'admin'],
         ['label' => 'Categories', 'icon' => 'tag', 'route' => 'categories.index', 'match' => 'categories*', 'role' => 'admin'],
         ['label' => 'Suppliers', 'icon' => 'truck', 'route' => 'suppliers.index', 'match' => 'suppliers*', 'role' => 'admin'],
+        ['label' => 'Reports', 'icon' => 'file', 'route' => 'reports.index', 'match' => 'reports*', 'role' => 'admin'],
     ];
 @endphp
 <!DOCTYPE html>
